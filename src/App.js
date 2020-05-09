@@ -1,11 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './tailwind.css'
 import Button from "./components/atoms/Button";
 
 function App() {
   return (
-    <div className="App">
+    <div className="bg-indigo-600">
+      <div className="text-2xl text-green-600">
+        HELLO
+      </div>
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
