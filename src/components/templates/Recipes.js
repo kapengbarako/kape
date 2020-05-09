@@ -10,10 +10,15 @@ const Recipes = ({handler, text}) => {
         {text: "Large", value: "large"},
     ];
 
+    const searchOptions = [
+        {text: "All", value: ""},
+        {text: "Name", value: "name"},
+        {text: "Address", value: "address"},
+    ];
+
     return (
         <Shell hideMenu={true}>
             <h1 className="text-2xl font-semibold text-gray-900">Hello</h1>
-
 
             <div>
                 <label htmlFor="input_search" className="sr-only">Search</label>
@@ -29,8 +34,11 @@ const Recipes = ({handler, text}) => {
                 </div>
             </div>
 
+            <div className="flex-1 w-full">
+                <FilterHelper label={"Search"} dropdownOptions={searchOptions}/>
+                <FilterHelper label={"Size"} dropdownOptions={sizeOptions}/>
+            </div>
 
-            <FilterHelper dropdownOptions={sizeOptions}/>
 
         </Shell>
     )

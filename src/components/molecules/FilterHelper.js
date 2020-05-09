@@ -1,13 +1,13 @@
 import React from 'react';
 import ButtonDropdownOptions from "../atoms/ButtonDropdownOptions";
 
-const FilterHelper = ({dropdownOptions}) => {
+const FilterHelper = ({label, dropdownOptions}) => {
 
 
     return (
-        <div>
-            <ButtonDropdownOptions label={"Size"} dropdownOptions={dropdownOptions}/>
-        </div>
+        <span>
+            <ButtonDropdownOptions label={label} dropdownOptions={dropdownOptions}/>
+        </span>
     )
 };
 
