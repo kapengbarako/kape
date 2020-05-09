@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import MobileMenu from "../organism/MobileMenu";
 import DesktopSidebar from "../organism/DesktopSidebar";
 
-const Shell = ({children, handler, text}) => {
-    const [hide, setHide] = useState(false);
+const Shell = ({children, hideMenu}) => {
+    const [hide, setHide] = useState(hideMenu);
     const closeMobileMenu = (e) => {
         setHide(true);
     };

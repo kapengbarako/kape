@@ -15,4 +15,4 @@ const clickHandler = () => {
 const text = "Hello There";
 
 
-export const Text = (props) => <Shell handler={clickHandler} text={text}/>;
+export const Open = (props) => <Shell handler={clickHandler} text={text} hideMenu={false}/>;
