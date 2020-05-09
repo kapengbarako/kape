@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import NavProfile from "../molecules/NavProfile";
 
 
 /*
@@ -12,17 +13,19 @@ import React from 'react';
     To: "-translate-x-full"
  */
 
-const MobileMenu = ({handler, text}) => {
+const MobileMenu = ({hidden, handler}) => {
+    const hideMenu = hidden ? "hidden transition ease-in-out duration-300 transform" : "md:hidden";
+
     return (
         // Off-canvas menu for mobile
-        <div className="md:hidden">
+        <div className={hideMenu}>
             <div className="fixed inset-0 flex z-40">
                 <div className="fixed inset-0">
-                    <div className="absolute inset-0 bg-gray-600 opacity-75"></div>
+                    <div className="absolute inset-0 bg-gray-600 opacity-75"/>
                 </div>
                 <div className="relative flex-1 flex flex-col max-w-xs w-full bg-white">
                     <div className="absolute top-0 right-0 -mr-14 p-1">
-                        <button
+                        <button onClick={handler}
                             className="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-gray-600"
                             aria-label="Close sidebar">
                             <svg className="h-6 w-6 text-white" stroke="currentColor" fill="none"
@@ -99,25 +102,7 @@ const MobileMenu = ({handler, text}) => {
                             </a>
                         </nav>
                     </div>
-                    <div className="flex-shrink-0 flex border-t border-gray-200 p-4">
-                        <a href="#" className="flex-shrink-0 group block focus:outline-none">
-                            <div className="flex items-center">
-                                <div>
-                                    <img className="inline-block h-10 w-10 rounded-full"
-                                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                         alt=""/>
-                                </div>
-                                <div className="ml-3">
-                                    <p className="text-base leading-6 font-medium text-gray-700 group-hover:text-gray-900">
-                                        Tom Cook
-                                    </p>
-                                    <p className="text-sm leading-5 font-medium text-gray-500 group-hover:text-gray-700 group-focus:underline transition ease-in-out duration-150">
-                                        View profile
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                    <NavProfile/>
                 </div>
                 <div className="flex-shrink-0 w-14">
                 </div>
