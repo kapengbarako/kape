@@ -1,5 +1,6 @@
 import React from 'react';
 import NavProfile from "../molecules/NavProfile";
+import NavLinks from "../molecules/NavLinks";
 
 const DesktopSidebar = ({handler, text}) => {
     return (
@@ -10,6 +11,7 @@ const DesktopSidebar = ({handler, text}) => {
                         <img className="h-8 w-auto" src="/img/logos/workflow-logo-on-white.svg" alt="Workflow"/>
                     </div>
 
+                    <NavLinks className="mt-5 flex-1 px-2 bg-white" mobile={false}/>
 
                     <nav className="mt-5 flex-1 px-2 bg-white">
                         <a href="#"
