@@ -1,10 +1,12 @@
 import React from 'react';
 import ButtonDropdownOptions from "../atoms/ButtonDropdownOptions";
 
-const FilterHelper = ({}) => {
+const FilterHelper = ({dropdownOptions}) => {
+
+
     return (
         <div>
-            <ButtonDropdownOptions label={"size"}/>
+            <ButtonDropdownOptions label={"Size"} dropdownOptions={dropdownOptions}/>
         </div>
     )
 };

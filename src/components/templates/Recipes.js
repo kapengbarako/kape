@@ -3,6 +3,13 @@ import Shell from "./Shell";
 import FilterHelper from "../molecules/FilterHelper";
 
 const Recipes = ({handler, text}) => {
+    const sizeOptions = [
+        {text: "All", value: ""},
+        {text: "Small", value: "small"},
+        {text: "Medium", value: "medium"},
+        {text: "Large", value: "large"},
+    ];
+
     return (
         <Shell hideMenu={true}>
             <h1 className="text-2xl font-semibold text-gray-900">Hello</h1>
@@ -23,7 +30,7 @@ const Recipes = ({handler, text}) => {
             </div>
 
 
-            <FilterHelper/>
+            <FilterHelper dropdownOptions={sizeOptions}/>
 
         </Shell>
     )
