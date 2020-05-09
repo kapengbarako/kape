@@ -1,13 +1,8 @@
 import React from 'react';
 
-
-
-
-
 const Button = ({handler, text}) => {
-    let style = "";
     return (
-        <div className={style}>
+        <div className="bg-indigo-600">
             <button onClick={handler}>
                 {text}
             </button>

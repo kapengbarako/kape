@@ -1,6 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import Button from "./Button";
+import TailwindCss from "../../tailwind.css"
 
 export default {
     title: 'atoms | Button',
