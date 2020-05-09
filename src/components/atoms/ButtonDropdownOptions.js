@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 const ButtonDropdownOptions = ({label}) => {
-    const showOptionsCSS = "origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg";
+    const showOptionsCSS = "origin-top-right absolute mt-2 w-56 rounded-md shadow-lg";
     const hideOptionsCSS = "hidden";
 
     const [displayOptions, setDisplayOptions] = useState(hideOptionsCSS);
@@ -31,7 +31,7 @@ const ButtonDropdownOptions = ({label}) => {
             <div className={displayOptions}>
                 <div className="rounded-md bg-white shadow-xs">
                     <div className="py-1">
-                        <a href="#"
+                        <button
                            className="group flex items-center px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900">
                             <svg
                                 className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500"
@@ -42,9 +42,9 @@ const ButtonDropdownOptions = ({label}) => {
                                       d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
                                       clip-rule="evenodd"/>
                             </svg>
-                            Edit
-                        </a>
-                        <a href="#"
+                            Small
+                        </button>
+                        <button
                            className="group flex items-center px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900">
                             <svg
                                 className="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500"
@@ -54,7 +54,7 @@ const ButtonDropdownOptions = ({label}) => {
                                       clip-rule="evenodd"/>
                             </svg>
                             Duplicate
-                        </a>
+                        </button>
                     </div>
                     <div className="border-t border-gray-100"/>
                     <div className="py-1">
