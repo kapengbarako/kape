@@ -1,19 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NavProfile from "../molecules/NavProfile";
-import NavLink from "../molecules/NavLink";
 import NavLinks from "../molecules/NavLinks";
-
-
-/*
-  Off-canvas menu, show/hide based on off-canvas menu state.
-
-  Entering: "transition ease-in-out duration-300 transform"
-    From: "-translate-x-full"
-    To: "translate-x-0"
-  Leaving: "transition ease-in-out duration-300 transform"
-    From: "translate-x-0"
-    To: "-translate-x-full"
- */
+import Logo from "../atoms/Logo";
 
 const MobileMenu = ({hidden, handler}) => {
     const hideMenu = hidden ? "hidden transition ease-in-out duration-300 transform" : "md:hidden";
@@ -38,9 +26,7 @@ const MobileMenu = ({hidden, handler}) => {
                         </button>
                     </div>
                     <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
-                        <div className="flex-shrink-0 flex items-center px-4">
-                            <img className="h-8 w-auto" src="/img/logos/workflow-logo-on-white.svg" alt="Workflow"/>
-                        </div>
+                        <Logo/>
                         <NavLinks className="mt-5 px-2" mobile={true}/>
                     </div>
                     <NavProfile/>
