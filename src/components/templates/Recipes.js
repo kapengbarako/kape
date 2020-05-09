@@ -1,6 +1,7 @@
 import React from 'react';
 import Shell from "./Shell";
 import FilterHelper from "../molecules/FilterHelper";
+import ResultsContainer from "../organism/ResultsContainer";
 
 const Recipes = ({handler, text}) => {
     const sizeOptions = [
@@ -51,7 +52,9 @@ const Recipes = ({handler, text}) => {
                 <FilterHelper label={"Size"} dropdownOptions={sizeOptions}/>
             </div>
 
-
+            <div className="pt-2">
+                <ResultsContainer />
+            </div>
         </Shell>
     )
 };
