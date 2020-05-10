@@ -52,7 +52,7 @@ const Recipes = ({handler, text}) => {
                 <FilterHelper label={"Size"} dropdownOptions={sizeOptions}/>
             </div>
 
-            <div className="pt-2">
+            <div className="">
                 <ResultsContainer />
             </div>
         </Shell>
