@@ -28,7 +28,7 @@ const Shell = ({children, hideMenu}) => {
                         </svg>
                     </button>
                 </div>
-                <main className="flex-1 relative z-0 overflow-y-auto pt-2 pb-6 focus:outline-none md:py-6" tabIndex="0">
+                <main className="bg-gray-100 flex-1 relative z-0 overflow-y-auto pt-2 pb-6 focus:outline-none md:py-6" tabIndex="0">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
                         {children}
                     </div>

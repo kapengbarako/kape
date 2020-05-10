@@ -6,7 +6,7 @@ const ItemCard = ({name, address}) => {
     //https://images.unsplash.com/photo-1428515613728-6b4607e44363?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80
     //The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + 'em'}} when using JSX.
     return (
-        <div className="overflow-hidden shadow rounded-lg">
+        <div className="overflow-hidden rounded-lg">
             <div className="">
                 <div className="relative h-48">
                     <img className="absolute h-full w-full object-cover rounded-lg shadow-md"
